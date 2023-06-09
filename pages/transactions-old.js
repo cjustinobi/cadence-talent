@@ -1,72 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import * as fcl from '@onflow/fcl'
-import { authorizationFunction } from '../helpers'
+import Head from 'next/head';
+import Image from 'next/image';
 
-export default function Home() {
-
-  const [newGreeting, setNewGreeting] = useState('');
-
-	function runTransactionx() {
-		console.log('Running transaction!');
-		console.log('Changing the greeting to: ' + newGreeting);
-	}
-
-  const runTransaction = async  () => {
-
-    const transactionId = await fcl.send([
-      fcl.transaction`
-      import TalentMkt1 from 0x5a7452d1db664257 
-  
-      transaction() {
-  
-        prepare(acct: AuthAccount) {
-          let vendorResource <- acct.load<@TalentMkt1.Vendor>(from: /storage/TalentMkt)
-          log(vendorResource?.details)
-          acct.save(<-vendorResource!, to: /storage/TalentMkt)
-        }
-  
-        execute {
-          //HelloWorld.changeGreeting(newGreeting: myNewGreeting)
-        }
-      }
-      `,
-      fcl.proposer(authorizationFunction),
-      fcl.authorizations([authorizationFunction]),
-      // args: (arg, t) => [],
-       //proposer: fcl.authz,
-      fcl.payer(authorizationFunction),
-      // authorizations: [fcl.authz],
-      fcl.limit(999)
-    ])
-
-      const transaction = await fcl.tx(transactionId).onceSealed()
-    console.log('transaction')
-    console.log(transaction)
-
-    console.log('Here is the transactionId: ' + JSON.stringify(transactionId))
-  }
-
-  const executeScript = async() => {
-    const response = await fcl.query({
-      cadence: `
-      import TalentMkt1 from 0x5a7452d1db664257
-  
-      pub fun main(): Int {
-          return TalentMkt1.vendorCount
-      }
-      `,
-      args: (arg, t) => [] // ARGUMENTS GO IN HERE
-    });
-
-    console.log('Response from our script: ' + response);
-  }
-
-  useEffect(() => {
-    executeScript()
-  }, [])
-
+export default function Transactions() {
   return (
     <div className="bg-[#1E1E1E]">
       <div className="container mx-auto bg-[#1E1E1E] p-2">
@@ -94,7 +29,7 @@ export default function Home() {
           </li>
         </ul>
         <div className="grid sm:grid-col-1 sm:grid-flow-row gap-4 lg:grid-col-4 lg:grid-flow-col">
-          <div className="p-[10px] border-2 border-blue-500 rounded-[16px]">
+          <div className="bg-gradient-to-b from-blue-1 to-green-1 rounded-2xl p-[1px]">
             <Image
               className="w-full rounded-[12px]"
               src={require('../assets/img/sample.png')}
@@ -129,7 +64,7 @@ export default function Home() {
 
           </div>
 
-          <div className="p-[10px] border-2 border-blue-500 rounded-[16px]">
+          <div className="bg-gradient-to-b from-blue-1 to-green-1 rounded-2xl p-[1px]">
             <Image
               className="w-full rounded-[12px]"
               src={require('../assets/img/sample.png')}
@@ -169,7 +104,7 @@ export default function Home() {
 
           </div>
 
-          <div className="p-[10px] border-2 border-blue-500 rounded-[16px]">
+          <div className="bg-gradient-to-b from-blue-1 to-green-1 rounded-2xl p-[1px]">
             <Image
               className="w-full rounded-[12px]"
               src={require('../assets/img/sample.png')}
@@ -381,5 +316,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }

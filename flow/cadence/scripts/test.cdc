@@ -1,4 +1,4 @@
-import TalentMkt1 from 0x5a7452d1db664257
+import TalentMkt1 from f8d6e0586b0a20c7
 
 pub fun main(): Int {
     return TalentMkt1.vendorCount

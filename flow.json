@@ -1,41 +1,23 @@
 {
+	"contracts": {
+		"TalentMkt": "./flow/cadence/contracts/TalentMkt.cdc"
+	},
 	"networks": {
 		"emulator": "127.0.0.1:3569",
 		"mainnet": "access.mainnet.nodes.onflow.org:9000",
-		"sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
 		"testnet": "access.devnet.nodes.onflow.org:9000"
 	},
 	"accounts": {
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
 			"key": "26b624eef00d760833077e35e50ad84e485688711a19a7e2c94209497ffdea4a"
-		},
-		"testnet-account": {
-			"address": "0x5a7452d1db664257",
-			"key": {
-			  "type": "hex",
-			  "index": 0,
-			  "signatureAlgorithm": "ECDSA_P256",
-			  "hashAlgorithm": "SHA3_256",
-			  "privateKey": "d88988be8506166e99bcc7c79a93393f8076379d921e7e6aed7e85d5a849f44c"
-			}
-		}
-		
-	},
-	"contracts": {
-		"TalentMkt1": {
-			"source": "./flow/cadence/contracts/TalentMkt.cdc",
-			"aliases": {
-				"testnet": "e5c1f1a94f025bc2370ad37cbd893c37d747002d716f44d272fb9e68ce5cc733"
-			}
 		}
 	},
 	"deployments": {
-		"testnet": {
-			"testnet-account": [
-				"TalentMkt1"
+		"emulator": {
+			"emulator-account": [
+				"TalentMkt"
 			]
 		}
-	}	
+	}
 }
-

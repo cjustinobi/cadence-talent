@@ -10,12 +10,12 @@ export default function Home() {
 
     const transactionId = await fcl.send([
       fcl.transaction`
-      import TalentMkt1 from 0x5a7452d1db664257 
+      import TalentMkt from f8d6e0586b0a20c7 
   
       transaction() {
   
         prepare(acct: AuthAccount) {
-          let vendorResource <- acct.load<@TalentMkt1.Vendor>(from: /storage/TalentMkt)
+          let vendorResource <- acct.load<@TalentMkt.Vendor>(from: /storage/TalentMkt)
           log(vendorResource?.details)
           acct.save(<-vendorResource!, to: /storage/TalentMkt)
         }
@@ -42,10 +42,10 @@ export default function Home() {
   const executeScript = async() => {
     const response = await fcl.query({
       cadence: `
-      import TalentMkt1 from 0x5a7452d1db664257
+      import TalentMkt from 0xf8d6e0586b0a20c7
   
       pub fun main(): Int {
-          return TalentMkt1.vendorCount
+          return TalentMkt.vendorCount
       }
       `,
       args: (arg, t) => [] // ARGUMENTS GO IN HERE
@@ -55,7 +55,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    executeScript()
+    // executeScript()
   }, [])
 
   return (
@@ -73,13 +73,13 @@ export default function Home() {
           <button className='bg-gradient-to-b from-blue-1 to-green-1 rounded-3xl p-[1px] '>
             <a href='' className='inline-flex w-40 px-4 py-3 md:px-8  md:py-6 2xl:px-16 items-center justify-center text-base text-white bg-black-1 rounded-3xl  '>
               Register
-              <Image className='w-4 md:w-4 h-4 ml-2 2xl:w-8' src={require ('../assets/img/vector-arrow.svg')}></Image>
+              <Image className='w-4 md:w-4 h-4 ml-2 2xl:w-8' src={require ('../assets/img/vector-arrow.svg')} alt="tmkt" />
             </a>
           </button>
           <button className=''>
             <a href='' className='inline-flex w-40 px-4 py-3 md:px-8 md:py-6 2xl:px-16 items-center justify-center text-base text-white bg-gradient-to-b from-blue-500 to-green-500 rounded-3xl'>
               Hire
-              <Image className='w-4 md:w-4 h-4 ml-2 2xl:w-8' src={require ('../assets/img/vector-arrow.svg')}></Image>
+              <Image className='w-4 md:w-4 h-4 ml-2 2xl:w-8' src={require ('../assets/img/vector-arrow.svg')} alt="tmkt" />
             </a>
           </button>
         </div>

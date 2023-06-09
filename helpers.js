@@ -4,8 +4,8 @@ import { SHA3 } from "sha3"
 import { ec as EC} from 'elliptic'
 const ec = new EC('p256');
 
-const ADDRESS = "0x5a7452d1db664257";
-const PRIVATE_KEY = "d88988be8506166e99bcc7c79a93393f8076379d921e7e6aed7e85d5a849f44c ";
+const ADDRESS = "0xf8d6e0586b0a20c7";
+const PRIVATE_KEY = "26b624eef00d760833077e35e50ad84e485688711a19a7e2c94209497ffdea4a ";
 const KEY_ID = 0;
 
 const sign = (message) => {
@@ -28,7 +28,7 @@ export const authorizationFunction = async (account) => {
     return {
         ...account, // bunch of defaults in here, we want to overload some of them though
         tempId: `${ADDRESS}-${KEY_ID}`, // tempIds are more of an advanced topic, for 99% of the times where you know the address and keyId you will want it to be a unique string per that address and keyId
-        addr: '5a7452d1db664257', // the address of the signatory, currently it needs to be without a prefix right now
+        addr: 'f8d6e0586b0a20c7', // the address of the signatory, currently it needs to be without a prefix right now
         keyId: Number(KEY_ID), // this is the keyId for the accounts registered key that will be used to sign, make extra sure this is a number and not a string
         signingFunction: async signable => {
             // Singing functions are passed a signable and need to return a composite signature
@@ -41,7 +41,3 @@ export const authorizationFunction = async (account) => {
         }
     }
 }
-
-// module.exports = {
-//     authorizationFunction
-// }

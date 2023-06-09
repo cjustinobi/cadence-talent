@@ -1,4 +1,4 @@
-pub contract TalentMkt1 {
+pub contract TalentMkt {
 
     //pub var vendors: [Address]
     pub var vendors: @{Address: Vendor}
@@ -25,16 +25,16 @@ pub contract TalentMkt1 {
         pub let rating: UInt64
     
 
-        init(address: Address, businessName: String, profession: String, filePath: String, description: String, price: UInt64, totalAmount: UInt64, transactionCount: UInt64, rating: UInt64) {
+        init(address: Address, businessName: String, profession: String, filePath: String, description: String, price: UInt64) {
             self.vendorAddress = address
             self.businessName = businessName
             self.profession = profession
             self.filePath = filePath
             self.description = description
             self.price = price
-            self.totalAmount = totalAmount
-            self.transactionCount = transactionCount
-            self.rating = rating
+            self.totalAmount = 0
+            self.transactionCount = 0
+            self.rating = 0
         }
     }
 
@@ -78,16 +78,15 @@ pub contract TalentMkt1 {
     pub resource Vendor {
         pub let details: VendorDetails
 
-        init(_vendorAddress: Address, _businessName: String, _profession: String, _filePath: String, _description: String, _price: UInt64, _totalAmount: UInt64, _transactionCount: UInt64, _rating: UInt64) {
-            self.details = VendorDetails(address: _vendorAddress, businessName: _businessName, profession: _profession, filePath: _filePath, description: _description, price: _price, totalAmount: _totalAmount, transactionCount: _transactionCount, rating: _rating)
+        init(_vendorAddress: Address, _businessName: String, _profession: String, _filePath: String, _description: String, _price: UInt64) {
+            self.details = VendorDetails(address: _vendorAddress, businessName: _businessName, profession: _profession, filePath: _filePath, description: _description, price: _price)
         }
     }
 
-    pub fun createVendorAsset(_vendorAddress: Address, _businessName: String, _profession: String, _filePath: String, _description: String, _price: UInt64, _totalAmount: UInt64, _transactionCount: UInt64, _rating: UInt64): @Vendor {
+    pub fun createVendorAsset(_vendorAddress: Address, _businessName: String, _profession: String, _filePath: String, _description: String, _price: UInt64): @Vendor {
         self.vendorCount = self.vendorCount + 1
-        
-        return  <- create Vendor(_vendorAddress: _vendorAddress, _businessName: _businessName, _profession: _profession, _filePath: _filePath, _description: _description, _price: _price, _totalAmount: _totalAmount, _transactionCount: _transactionCount, _rating: _rating)
-        //self.vendors[_vendorAddress] <-! vendor
+        self.vendors[_vendorAddress] <-! create Vendor(_vendorAddress: _vendorAddress, _businessName: _businessName, _profession: _profession, _filePath: _filePath, _description: _description, _price: _price)
+        return  <- create Vendor(_vendorAddress: _vendorAddress, _businessName: _businessName, _profession: _profession, _filePath: _filePath, _description: _description, _price: _price)
        
     }
 
@@ -106,6 +105,6 @@ pub contract TalentMkt1 {
 
     init() {
         self.vendors <- {}
-        self.vendorCount = 1
+        self.vendorCount = 18
     }
 }
