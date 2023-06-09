@@ -60,10 +60,7 @@ export default function Home() {
 
   return (
     <div>
-      {/*<Head>*/}
-      {/*  <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet"/>*/}
-      {/*  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,1,300&display=swap" rel="stylesheet"/>*/}
-      {/*</Head>*/}
+
       <div className="bg-black-1 flex flex-col items-center justify-center h-full- h-[580px] sm:h-screen- sm:h-[640px] md:h-[800px] lg:h-[690px] xl:h-[600px]">
         <div className='container flex flex-col items-center justify-center px-4 py-5 mx-auto md:px-10 lg:px-16 xl:px-24'>
           <p className="text-4xl md:text-6xl xl:text-8xl py-2 text-white font-bold leading-tight text-center font-ClashDisplay">Your One-Stop Spot for Freelance <span className='bg-clip-text text-transparent bg-gradient-to-b from-blue-1 to-green-1'>Talent</span></p>
