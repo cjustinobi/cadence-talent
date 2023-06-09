@@ -93,11 +93,11 @@ export default function Home() {
                 <div className='flex flex-row w-full justify-between'>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Rate/hr</p>
-                    <p className='text-sm font-normal leading-5 text-white'>0.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>0.25 Flow</p>
                   </div>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Total Earns</p>
-                    <p className='text-sm font-normal leading-5 text-white'>8.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>8.25 Flow</p>
                   </div>
                 </div>
                 <div className='flex flex-row w-full justify-between'>
@@ -123,11 +123,11 @@ export default function Home() {
                 <div className='flex flex-row w-full justify-between'>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Rate/hr</p>
-                    <p className='text-sm font-normal leading-5 text-white'>0.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>0.25 Flow</p>
                   </div>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Total Earns</p>
-                    <p className='text-sm font-normal leading-5 text-white'>8.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>8.25 Flow</p>
                   </div>
                 </div>
                 <div className='flex flex-row w-full justify-between'>
@@ -153,11 +153,11 @@ export default function Home() {
                 <div className='flex flex-row w-full justify-between'>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Rate/hr</p>
-                    <p className='text-sm font-normal leading-5 text-white'>0.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>0.25 Flow</p>
                   </div>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Total Earns</p>
-                    <p className='text-sm font-normal leading-5 text-white'>8.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>8.25 Flow</p>
                   </div>
                 </div>
                 <div className='flex flex-row w-full justify-between'>
@@ -183,11 +183,11 @@ export default function Home() {
                 <div className='flex flex-row w-full justify-between'>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Rate/hr</p>
-                    <p className='text-sm font-normal leading-5 text-white'>0.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>0.25 Flow</p>
                   </div>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Total Earns</p>
-                    <p className='text-sm font-normal leading-5 text-white'>8.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>8.25 Flow</p>
                   </div>
                 </div>
                 <div className='flex flex-row w-full justify-between'>
@@ -213,11 +213,11 @@ export default function Home() {
                 <div className='flex flex-row w-full justify-between'>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Rate/hr</p>
-                    <p className='text-sm font-normal leading-5 text-white'>0.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>0.25 Flow</p>
                   </div>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Total Earns</p>
-                    <p className='text-sm font-normal leading-5 text-white'>8.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>8.25 Flow</p>
                   </div>
                 </div>
                 <div className='flex flex-row w-full justify-between'>
@@ -239,15 +239,15 @@ export default function Home() {
             <div className='bg-gradient-to-b from-blue-1 to-green-1 rounded-2xl p-[1px]'>
               <div className='bg-dark-grey-1 space-y-2 relative  rounded-2xl p-4 h-full text-white'>
                 <Image src={require('../assets/img/available-img.svg')} className=''></Image>
-                <p className='text-xl my-2- font-bold leading-6 text-start text-white'>Gconsult Services</p>
+                <p className='text-xl my-2- font-bold leading-6 text-start text-white'>Joey</p>
                 <div className='flex flex-row w-full justify-between'>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Rate/hr</p>
-                    <p className='text-sm font-normal leading-5 text-white'>0.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>0.25 Flow</p>
                   </div>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Total Earns</p>
-                    <p className='text-sm font-normal leading-5 text-white'>8.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>8.25 Flow</p>
                   </div>
                 </div>
                 <div className='flex flex-row w-full justify-between'>
@@ -269,15 +269,15 @@ export default function Home() {
             <div className='bg-gradient-to-b from-blue-1 to-green-1 rounded-2xl p-[1px]'>
               <div className='bg-dark-grey-1 space-y-2 relative  rounded-2xl p-4 h-full text-white'>
                 <Image src={require('../assets/img/available-img.svg')} className=''></Image>
-                <p className='text-xl my-2- font-bold leading-6 text-start text-white'>Gconsult Services</p>
+                <p className='text-xl my-2- font-bold leading-6 text-start text-white'>Cejowisz Tech</p>
                 <div className='flex flex-row w-full justify-between'>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Rate/hr</p>
-                    <p className='text-sm font-normal leading-5 text-white'>0.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>3 Flow</p>
                   </div>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Total Earns</p>
-                    <p className='text-sm font-normal leading-5 text-white'>8.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>8.25 Flow</p>
                   </div>
                 </div>
                 <div className='flex flex-row w-full justify-between'>
@@ -299,15 +299,15 @@ export default function Home() {
             <div className='bg-gradient-to-b from-blue-1 to-green-1 rounded-2xl p-[1px]'>
               <div className='bg-dark-grey-1 space-y-2 relative  rounded-2xl p-4 h-full text-white'>
                 <Image src={require('../assets/img/available-img.svg')} className=''></Image>
-                <p className='text-xl my-2- font-bold leading-6 text-start text-white'>Gconsult Services</p>
+                <p className='text-xl my-2- font-bold leading-6 text-start text-white'>Phoel Agr</p>
                 <div className='flex flex-row w-full justify-between'>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Rate/hr</p>
-                    <p className='text-sm font-normal leading-5 text-white'>0.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>0.25 Flow</p>
                   </div>
                   <div className='flex w-fit flex-col items-start justify-center'>
                     <p className='text-sm font-medium leading-5 text-bright-grey-1'>Total Earns</p>
-                    <p className='text-sm font-normal leading-5 text-white'>8.25 CELLO</p>
+                    <p className='text-sm font-normal leading-5 text-white'>8.25 Flow</p>
                   </div>
                 </div>
                 <div className='flex flex-row w-full justify-between'>
